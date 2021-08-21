@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="4" time="0.943482">
+<testcase classname="Order" name="get Order info" time="0.465552">
+<failure message="java.lang.Exception: 123&#13;&#10;&#9;at com.learn.steps.OrderSteps.return_Order_success(OrderSteps.java:15)&#13;&#10;&#9;at ✽.return Order success(classpath:feature/Order.feature:9)&#13;&#10;"><![CDATA[Given user is login.........................................................passed
+When get Order by userid....................................................passed
+Then return Order success...................................................failed
+
+StackTrace:
+java.lang.Exception: 123
+	at com.learn.steps.OrderSteps.return_Order_success(OrderSteps.java:15)
+	at ✽.return Order success(classpath:feature/Order.feature:9)
+]]></failure>
+</testcase>
+<testcase classname="Order" name="add order info" time="0.012159">
+<skipped><![CDATA[Given user is login.........................................................passed
+When add order by userid....................................................undefined
+Then return add order success...............................................undefined
+]]></skipped>
+</testcase>
+<testcase classname="User" name="get user info" time="0.419516">
+<system-out><![CDATA[Given user is login.........................................................passed
+When get user by 1..........................................................passed
+Then return success.........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User" name="get user info 2" time="0.046255">
+<failure message="java.lang.NullPointerException&#13;&#10;&#9;at com.learn.steps.UserSteps.checkSuccess(UserSteps.java:28)&#13;&#10;&#9;at ✽.return success(classpath:feature/User.feature:7)&#13;&#10;"><![CDATA[Given user is login.........................................................passed
+When get user by 2..........................................................passed
+Then return success.........................................................failed
+
+StackTrace:
+java.lang.NullPointerException
+	at com.learn.steps.UserSteps.checkSuccess(UserSteps.java:28)
+	at ✽.return success(classpath:feature/User.feature:7)
+]]></failure>
+</testcase>
+</testsuite>
