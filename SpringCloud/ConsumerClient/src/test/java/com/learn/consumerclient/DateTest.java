@@ -2,14 +2,19 @@ package com.learn.consumerclient;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.learn.util.JwtUtil;
+import org.junit.Test;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 
+
 public class DateTest {
-    public static void main(String[] args) {
+
+    @Test
+    public void main() {
         System.out.println(Date.from(LocalDateTime.now().plusDays(7).atZone(ZoneId.of("Asia/Shanghai")).toInstant()));
 
         Algorithm algorithm = Algorithm.HMAC256("secret");
@@ -25,5 +30,10 @@ public class DateTest {
                 .sign(algorithm);
         System.out.println(a);
         System.out.println(b);
+    }
+
+    @Test
+    public void testJwt(){
+        JwtUtil.getJwtToken("123");
     }
 }
