@@ -2,6 +2,7 @@ package com.learn.consumerclient;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.learn.test.BusiController;
 import com.learn.util.JwtUtil;
 import org.junit.Test;
 
@@ -33,7 +34,18 @@ public class DateTest {
     }
 
     @Test
-    public void testJwt(){
+    public void testJwtGetToken(){
         JwtUtil.getJwtToken("123");
+    }
+
+    @Test
+    public void testJwtValidateToken(){
+        JwtUtil.validateJwtToken(JwtUtil.getJwtToken("123"));
+    }
+
+    @Test
+    public void testGetWorkDay(){
+        BusiController busiController = new BusiController();
+        busiController.getWorkDay("1");
     }
 }
