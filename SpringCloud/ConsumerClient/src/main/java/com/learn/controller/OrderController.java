@@ -28,6 +28,14 @@ public class OrderController {
 //        String url = "http://"+serviceInstance.getHost()+":"+serviceInstance.getPort()+"/user/" + id;
 //
 //        return restTemplate.getForObject(url, User.class);
+        try {
+            System.out.println("===received order request");
+            Thread.sleep(10000);
+            System.out.println("===finished order request");
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return orderFeignClient.getUser(id);
     }
 

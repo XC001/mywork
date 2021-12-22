@@ -1,0 +1,10 @@
+server:
+  port: 8088
+---
+spring:
+  profiles: "test"
+maxCount: 10
+---
+spring:
+  profiles: "prod | uat"
+maxCount: 20

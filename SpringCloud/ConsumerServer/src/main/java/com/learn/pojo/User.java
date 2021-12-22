@@ -1,6 +1,8 @@
 package com.learn.pojo;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.ToString;
 import tk.mybatis.mapper.annotation.KeySql;
 
 import javax.persistence.Id;
@@ -8,6 +10,7 @@ import javax.persistence.Table;
 
 @Data
 @Table(name="user")
+@ToString
 public class User {
     @Id
     @KeySql(useGeneratedKeys = true)

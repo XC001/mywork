@@ -9,8 +9,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class InteceptConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new AuthenticationInterceptor())
-        .addPathPatterns("/**")
-        .excludePathPatterns("/login", "/index.html");
+//        registry.addInterceptor(new AuthenticationInterceptor())
+//        .addPathPatterns("/**")
+//        .excludePathPatterns("/login", "/index.html");
     }
 }
